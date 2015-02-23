@@ -10,11 +10,16 @@ package com.mycompany.masodik_hf;
  * @author MártonZoltán
  */
 public class StringCalculator {
-    
-    
-    public int add(String numbers){
-      if(numbers.isEmpty()){return 0;}
+
+    public int add(String numbers) {
+        if (numbers.isEmpty()) {
+            return 0;
+        }
+
+        String [] numbersList=numbers.split(",");
       
-        
+      switch(numbersList.length){
+          case 1: return Integer.parseInt(numbersList[0]) ;
+      }
     }
 }
