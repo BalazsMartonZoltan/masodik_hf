@@ -5,6 +5,8 @@
  */
 package com.mycompany.masodik_hf;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author MártonZoltán
@@ -12,15 +14,17 @@ package com.mycompany.masodik_hf;
 public class StringCalculator {
 
     public int add(String numbers) {
-        if (numbers.isEmpty()) {
-            return 0;
+        int osszeg=0;
+        if (!numbers.isEmpty()) {
+            String[] numbersStringList = numbers.split(",");
+            
+            for (String stringnumber : numbersStringList) {
+                int intnumber=Integer.parseInt(stringnumber);
+                
+                osszeg+=intnumber;
+            }
+            return osszeg;
         }
-
-        String [] numbersList=numbers.split(",");
-      
-      switch(numbersList.length){
-          case 1: return Integer.parseInt(numbersList[0]) ;
-          case 2: return Integer.parseInt(numbersList[0]+numbersList[1]);
-      }
+        return osszeg;
     }
 }
