@@ -16,7 +16,7 @@ public class StringCalculator {
     public int add(String numbers) {
         int osszeg=0;
         if (!numbers.isEmpty()) {
-            String[] numbersStringList = numbers.split(",");
+            String[] numbersStringList = numbers.split(",|\\;|\\\n|\\|");
             
             for (String stringnumber : numbersStringList) {
                 int intnumber=Integer.parseInt(stringnumber);
