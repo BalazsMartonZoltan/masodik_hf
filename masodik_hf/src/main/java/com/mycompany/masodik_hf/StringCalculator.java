@@ -20,6 +20,7 @@ public class StringCalculator {
       
       switch(numbersList.length){
           case 1: return Integer.parseInt(numbersList[0]) ;
+          case 2: return Integer.parseInt(numbersList[0]+numbersList[1]);
       }
     }
 }
